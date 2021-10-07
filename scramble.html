@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            width: 100%;
+            line-height: 15vh;
+            background-color: #B6977D;
+
+        }
+
+        h1 {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center;
+            color: white;
+            text-transform: uppercase;
+            font-size: 1.8rem;
+            letter-spacing: 15px;
+            font-family: 'Heebo', sans-serif;
+        }
+
+        section {
+            height: 85vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #C4A484;
+
+        }
+
+        .gameArea {
+            width: 50%;
+            height: 400px;
+            padding: 20px 0;
+            background-color: #B6977D;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 8px 6px -6px black;
+            font-family: 'Heebo', sans-serif;
+        }
+
+        h3 {
+            text-align: center;
+            font-size: 1.5rem;
+            color: black;
+        }
+
+        input {
+            width: 40%;
+            padding: 15px 0;
+            text-align: center;
+            border-radius: 25px;
+            outline: none;
+            border: none;
+            background-color: #ffff;
+            color: black;
+            margin: 2rem 0;
+            font-size: 1.1rem;
+        }
+
+        button {
+            font-size: 1rem;
+            cursor: pointer;
+            outline: none;
+            border: #2f3542;
+            text-decoration: none;
+            margin-top: 10px;
+            color: #2f3542;
+        }
+
+        button.btn {
+            font-weight: 600;
+            padding: 1rem 2rem;
+            background: white;
+            text-transform: uppercase;
+            transition-property: all;
+            transition-duration: 0.5s;
+            transition-timing-function: cubic-bezier(0.65, -0.25, 0.25, 1.95);
+        }
+
+        button.btn:hover,
+        button.btn:focus,
+        button.btn:active {
+            letter-spacing: 0.125rem;
+            word-spacing: 0.2rem;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Scramble Game</h1>
+    </header>
+    <section>
+        <div class="gameArea">
+            <h3 class="msg"></h3>
+            <input type="text" class="hidden">
+            <button class="btn">Click here to start</button>
+        </div>
+    </section>
+
+    <script>
+        const msg = document.querySelector('.msg');
+        const guess = document.querySelector('input');
+        const btn = document.querySelector('.btn');
+        let play = false;
+        let newWords = "";
+        let randWords = "";
+        let words = ['python', 'javascript', 'c++', 'php', 'java', 'c#', 'html', 'css', 'reactjs', 'angular', 'swift', 'android', 'sql'];
+
+        const createNewWords = () => {
+            let randNum = Math.floor(Math.random() * words.length);
+            //console.log(ranNum);
+            let newTempWords = words[randNum]; //Randomly display words
+            //console.log(newTempWords.split(""));
+            return newTempWords;
+
+        }
+
+        const scrambleWords = (arr) => {
+            for (let i = arr.length - 1; i >= 0; i--) { //Reverse the words of the string 
+                let temp = arr[i];
+                let j = Math.floor(Math.random() * (i + 1));
+                //console.log(i); //exact random number
+                //console.log(j); //random number - shuffled index number
+                arr[i] = arr[j];
+                arr[j] = temp;
+
+            }
+            return arr; //i array is returned
+
+        }
+
+        btn.addEventListener('click', function() {
+            if (!play) {
+                console.log(play);
+                console.log(!play);
+                play = true;
+                btn.innerHTML = "Guess";
+                guess.classList.toggle('hidden');
+                newWords = createNewWords();
+                randWords = scrambleWords(newWords.split("")).join("");
+                //console.log(randWords.join(""));
+                msg.innerHTML = `Guess the word: ${randWords}`;
+                //msg.innerHTML = randWords;
+            }else{
+                let tempWords = guess.value; //value of input field
+                console.log(tempWords);
+                console.log(newWords);
+                console.log(tempWords===newWords);
+                if(tempWords===newWords) {
+                    console.log("correct");
+                    play = false;
+                    msg.innerHTML = `Congratulation, its correct. It is ${newWords}`;
+                    btn.innerHTML = "Start Again";
+                    guess.classList.toggle('hidden');
+                    guess.value = "";
+
+                }
+                else {
+                    console.log("wrong");
+                    play = false;
+                    msg.innerHTML = `Sorry, its incorrect. It is ${newWords}. Try Again`;
+                    btn.innerHTML="Start Again";
+                    guess.classList.toggle('hidden');
+                    guess.value = "";
+                }
+            
+            }
+        })
+
+    </script>
+</body>
+
+</html>
