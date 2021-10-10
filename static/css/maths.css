@@ -7,6 +7,15 @@ body {
   box-sizing: border-box;
 }
 
+.title{
+  position: absolute;
+    /* text-align: center; */
+    left: 400px;
+    color: white;
+    font-size: 45px;
+    margin-top: 12px;
+}
+
 .maths-container{
   display: flex;
   align-items: center;

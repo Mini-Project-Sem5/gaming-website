@@ -13,6 +13,11 @@
         <div class="btn-container">
         <button class="restart" onclick="startGame()">RESTART</button>
         <a href="/game"  class="restart">EXIT</a>
+        <div class="selectSym">
+            <p>Select symbol:</p>
+            <button onclick="selectSym('X')">X</button>
+            <button onclick="selectSym('O')">O</button>
+        </div>
         </div>
         <div class="tic-container">
             <table>
@@ -35,6 +40,7 @@
             <div class="endgame">
                 <div class="text"></div>
             </div>
+            
         </div>     
     </div>
     <script src="../static/js/tic.js"></script>

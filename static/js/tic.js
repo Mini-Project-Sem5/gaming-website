@@ -1,6 +1,6 @@
-var origBoard;
-const huPlayer = '0';
-const aiPlayer = 'X';
+let origBoard;
+let huPlayer = '0';
+let aiPlayer = 'X';
 const winCombos = [
     [0, 1, 2],
     [3, 4, 5],
@@ -15,9 +15,24 @@ const winCombos = [
 const cells = document.querySelectorAll('.cell');
 
 startGame();
+
+function selectSym(sym){
+    huPlayer = sym;
+    aiPlayer = sym==='O' ? 'X' :'O';
+    origBoard = Array.from(Array(9).keys());
+    for (let i = 0; i < cells.length; i++) {
+      cells[i].addEventListener('click', turnClick, false);
+    }
+    if (aiPlayer === 'X') {
+      turn(bestSpot(),aiPlayer);
+    }
+    document.querySelector('.selectSym').style.display = "none";
+  }
+
 function startGame(){
     document.querySelector(".endgame").style.display = 'none';
-    origBoard = Array.from(Array(9).keys());
+    document.querySelector('.endgame .text').innerText ="";
+    document.querySelector('.selectSym').style.display = "block";
     for (let i = 0; i < cells.length ; i++)
     {
         cells[i].innerText = '';
@@ -28,9 +43,9 @@ function startGame(){
 }
 
 function turnClick(square) {
-    if(typeof origBoard[square.target.id] == 'number'){
+    if(typeof origBoard[square.target.id] === 'number'){
         turn(square.target.id , huPlayer);
-        if(!checkTie()) turn(bestSpot(), aiPlayer);
+        if(!checkTie() && !checkWin(origBoard,huPlayer)) turn(bestSpot(), aiPlayer);
     }
 }
 
@@ -42,6 +57,7 @@ function turn(squareId, player){
     {
         gameOver(gameWon)
     }
+    checkTie();
 }
 
 function checkWin( board, player){
@@ -147,6 +163,6 @@ function minimax(newBoard , player){
             }
         }
     }
-    
+
     return moves[bestMove];
 }

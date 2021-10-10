@@ -4,7 +4,8 @@ const msg = document.querySelector('.msg');
         let play = false;
         let newWords = "";
         let randWords = "";
-        let words = ['python', 'javascript', 'c++', 'php', 'java', 'c#', 'html', 'css', 'reactjs', 'angular', 'swift', 'android', 'sql'];
+        let words = ['python', 'javascript', 'c++', 'php', 'java', 'c#', 'html', 'css', 'reactjs', 'angular', 'swift', 'android', 'sql',
+    'Hoisting','Inheritance','', 'Callbacks' , 'Promises'];
 
         const createNewWords = () => {
             let randNum = Math.floor(Math.random() * words.length);

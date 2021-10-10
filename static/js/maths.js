@@ -21,15 +21,22 @@ function updateProblem() {
 
 updateProblem()
 
-function generateNumber(max) {
-  return Math.floor(Math.random() * (max + 1))
+function generateNumberO(max) {
+  return Math.floor(Math.random() * (max +1))
 }
+
+
+function generateNumber() {
+  return Math.floor(Math.random() * (101))
+}
+
+
 
 function generateProblem() {
   return {
-    numberOne: generateNumber(10),
-    numberTwo: generateNumber(10),
-    operator: ['+', '-', 'x'][generateNumber(2)]
+    numberOne: generateNumber(),
+    numberTwo: generateNumber(),
+    operator: ['+', '/', 'x' , '-'][generateNumberO(3)]
   }
 }
 
@@ -43,6 +50,7 @@ function handleSubmit(e) {
   if (p.operator == "+") correctAnswer = p.numberOne + p.numberTwo
   if (p.operator == "-") correctAnswer = p.numberOne - p.numberTwo
   if (p.operator == "x") correctAnswer = p.numberOne * p.numberTwo
+  if (p.operator == "/") correctAnswer = Math.round( p.numberOne / p.numberTwo)
 
   if (parseInt(ourField.value, 10) === correctAnswer) {
     state.score++

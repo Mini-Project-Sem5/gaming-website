@@ -2,6 +2,7 @@ var memory_array = ['A','A','B','B','C','C','D','D','E','E','F','F','G','G','H',
 var memory_values = [];
 var memory_tile_ids = [];
 var tiles_flipped = 0;
+newBoard();
 Array.prototype.memory_tile_shuffle = function(){
     var i = this.length, j, temp;
     while(--i > 0){
