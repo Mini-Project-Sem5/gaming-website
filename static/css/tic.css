@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@500&family=Lobster&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#title{
+    background-color: black;
+    color: wheat;
+    font-family: cursive;
+    font-family: 'Crimson Pro', serif;
+    /* font-family: 'Lobster', cursive; */
+    letter-spacing: 2px;
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.box-btn{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 90vh;
+    background-color: black;
+}
+
+.btn-container{
+    margin: 0px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 250px;
+    justify-content: space-evenly;
+}
+
+.btn-container a{
+    text-decoration: none;
+    padding: 6px 30px;
+}
+
+.tic-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0px 50px;
+    
+}
+
+td{
+    border: 8px inset wheat;
+    height: 150px;
+    width: 150px;
+    text-align: center;
+    vertical-align: middle;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 70px;
+    cursor: pointer;
+    color: wheat;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+table tr:first-child td{
+    border-top: 0;
+}
+table tr:last-child td{
+    border-bottom: 0;
+}
+table tr td:first-child{
+    border-left: 0;
+}
+table tr td:last-child{
+    border-right: 0;
+}
+
+.endgame{
+    display: none;
+    background-color: rgb(69 0 253 / 52%);
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    border-radius: 5px;
+    padding: 150px 70px;
+    top: 50px;
+}
+
+.text{
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 50px;
+}
+
+.restart{
+    padding: 10px;
+    border-radius: 5px;
+    font-family: cursive;
+    font-size: 30px;
+    background-color: black;
+    color: wheat;
+    cursor: pointer;
+    border: 2px solid wheat;
+}
+
+.restart:hover{
+    color: black;
+    background-color: wheat;
+    border: 2px solid black;
+}
+

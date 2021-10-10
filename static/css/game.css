@@ -29,6 +29,7 @@
     background:rgba(0,0,0,0.6);
     color:white;
     padding: 12px 32px;
+    border-radius: 5px;
   }
   
   .game1{
@@ -58,4 +59,9 @@
     background-position: center;
     background-size: cover;
     background-blend-mode: multiply;
+  }
+
+
+  section h1 a{
+    text-decoration: none;
   }

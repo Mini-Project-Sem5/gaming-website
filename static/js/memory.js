@@ -1,33 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<a href="javascript:window.top.location.reload(true)" class="Reset" style="color:black">Reset</a>
-	<a href="file:///C:/Users/hrish/OneDrive/Desktop/game.html" class="Exit" style="color:black">Exit</a>
-<style>
-	div#memory_board{
-	background:#CCC;
-	border:#999 1px solid;
-	width:800px;
-	height:540px;
-	padding:24px;
-	margin:0px auto;
-}
-div#memory_board > div{
-	background: url(tile_bg.jpg) no-repeat;
-	border:#000 1px solid;
-	width:71px;
-	height:71px;
-	float:left;
-	margin:10px;
-	padding:20px;
-	font-size:64px;
-	cursor:pointer;
-	text-align:center;
-}
-</style>
-<script>
-// Scripted By Adam Khoury in connection with the following video tutorial:
-// http://www.youtube.com/watch?v=c_ohDPWmsM0
 var memory_array = ['A','A','B','B','C','C','D','D','E','E','F','F','G','G','H','H','I','I','J','J','K','K','L','L'];
 var memory_values = [];
 var memory_tile_ids = [];
@@ -89,11 +59,3 @@ function memoryFlipTile(tile,val){
 		}
 	}
 }
- 
-</script>
-</head>
-<body>
-<div id="memory_board"></div>
-<script>newBoard();</script>
-</body>
-</html>
