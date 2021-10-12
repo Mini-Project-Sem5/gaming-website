@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@500&family=Lobster&display=swap');
+.box-btn {
+    flex-direction: column;
+    height: auto;
+
+}
+
+.btn-container {
+    margin: 8px 0px 12px 0px;
+    justify-content: flex-start;
+    height: auto;
+}
+
+.restart {
+    font-size: 20px;
+    margin: 15px;
+}
+
+.phone{
+    flex-direction: row;
+}
+
+.phone a{
+    display: flex;
+    align-items: center;
+
+}
+
+.tic-container {
+    width: 85%;
+    margin: 15px 50px 30px 50px;
+}
+
+td{
+    height: 117px;
+    font-size: 50px;
+}
+
+.endgame{
+    padding: 130px 41px;
+    top: 261px;
+    color: black;
+    background-color: rgba(216, 216, 216, 0.514)
+}
+
+.text{
+    font-family: 'Crimson Pro', serif;
+}

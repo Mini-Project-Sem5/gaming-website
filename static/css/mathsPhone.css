@@ -1,0 +1,41 @@
+
+.maths-container {
+  height: 100vh;
+  padding: 5px;
+}
+
+.title{
+    font-size: 35px;
+    letter-spacing: 3px;
+    margin-bottom: 50px;
+}
+
+.problem {
+    font-size: 3rem;
+}
+
+.status {
+    font-size: 16px;
+    margin: 5px;
+}
+
+.our-form input, button {
+    font-size: 13px;
+}
+
+.main-ui{
+    height: 290px;
+}
+
+.progress{
+    margin: 16px;
+}
+
+
+.exit a {
+    display: flex;
+    justify-content: center;
+    font-size: 26px;
+    background: linear-gradient(to bottom, #5757e4 0%, #010196 100%);
+    border-radius: 10px;
+}

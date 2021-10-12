@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic-Tac-Toe</title>
     <link rel="stylesheet" href="../static/css/tic.css">
+    <link rel="stylesheet"  media="screen and (max-width:500px)"  href="../static/css/ticPhone.css">
 </head>
 <body>
     <h1 id="title">Tic-Tac-Toe Game</h1>
     <div class="box-btn">
         <div class="btn-container">
+        <div class="phone">
         <button class="restart" onclick="startGame()">RESTART</button>
         <a href="/game"  class="restart">EXIT</a>
+    </div>
         <div class="selectSym">
             <p>Select symbol:</p>
             <button onclick="selectSym('X')">X</button>

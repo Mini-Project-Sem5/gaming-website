@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../static/css/main.css">
   <link rel="stylesheet" href="../static/css/we.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Buddies Hub</title>
 </head>
 
@@ -22,84 +23,93 @@
       <a href="#about" class="btn">Our Team</a>
     </div>
   </section>
-  <section id="about">
-    <div class="team-area">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="section-title text-center">
-              <h2>Our Team</h2>
-              <p>We are third year IT students of Thadomal Shahani Engineering College along with our guide who have
-                made this gaming website.</p>
-            </div>
-          </div>
 
-          <!--== Single Team Item ==-->
-          <div class="col-md-3">
-            <div class="single-team">
-              <div class="team-img">
-                <img src="" alt="Muskan img" class="img-responsive">
-              </div>
-              <div class="team-content">
-                <div class="team-info">
-                  <h3>Muskan Gupta</h3>
-                  <p>Web Developer</p>
-                </div>
-                <p class="team-text">Loves to design websites and plans to become full stack developer.</p>
-              </div>
+  <div class="about" id="about">
+
+    <div class="about-title">
+      <h1>Our Team</h1>
+    </div>
+
+    <div class="about-cards">
+
+      <div class="card" id="card-1">
+        <div class="image">
+          <img src="../static/media/muskan_pic.jpeg" alt="muskan pic">
+        </div>
+        <div class="content-a">
+          <div class="title">
+            | Muskan Gupta
+          </div>
+          <div class="sub-title">FullStack Developer</div>
+          <div class="button">
+            <p>Loves to design websites and plans to become FullStack Developer.</p>
+            <!-- <button>Read More</button> -->
+            <div class="icon">
+              <a target="_blank" href="mailto:muskan80525@gmail.com" class="upIcon email">
+                <i class="fa fa-envelope"></i></a>
+              <a target="_blank" href="https://www.facebook.com/profile.php?id=100009637147503" class="upIcon facebook">
+                <i class="fa fa-facebook"></i></a>
+              <a  target="_blank" href="https://www.instagram.com/muskan80526/" class="upIcon insta"><i class="fa fa-instagram"></i></a>
+              <a target="_blank" href="https://www.linkedin.com/in/muskan-gupta-9a794614a/" class="upIcon linkedin"><i class="fa fa-linkedin"></i></a>
             </div>
           </div>
-          <!--== Single Team Item ==-->
-          <div class="col-md-3">
-            <div class="single-team">
-              <div class="team-img">
-                <img src="me.jpg" alt="Hrishita img" class="img-responsive">
-              </div>
-              <div class="team-content">
-                <div class="team-info">
-                  <h3>Hrishita Kumar</h3>
-                  <p>Web Developer</p>
-                </div>
-                <p class="team-text">Loves to explore and code new games in different coding languages.</p>
-              </div>
-            </div>
+        </div>
+      </div>
+
+      <div class="card" id="card-2">
+        <div class="image">
+          <img src="../static/media/muskan_pic.jpeg" alt="muskan pic">
+        </div>
+        <div class="content-a">
+          <div class="title">
+            | Hrishita Kumar
           </div>
-          <!--== Single Team Item ==-->
-          <div class="col-md-3">
-            <div class="single-team">
-              <div class="team-img">
-                <img src="shreya.jpg" alt="shreya img" class="img-responsive">
-              </div>
-              <div class="team-content">
-                <div class="team-info">
-                  <h3>Shreya Manjucha</h3>
-                  <p>Web Developer</p>
-                </div>
-                <p class="team-text">Great at solving dsa sums and debugging the code!</p>
-              </div>
-            </div>
+          <div class="sub-title">Web Developer</div>
+          <div class="button">
+            <p>Loves to explore and code new games in different coding languages. </p>
+            <button>Read More</button>
           </div>
-          <!--== Single Team Item ==-->
-          <div class="col-md-3">
-            <div class="single-team">
-              <div class="team-img">
-                <img src="sir.jpg" alt="" class="img-responsive">
-              </div>
-              <div class="team-content">
-                <div class="team-info">
-                  <h3>Dr. Arun Kulkarni</h3>
-                  <p>Project Guide</p>
-                </div>
-                <p class="team-text">Mentors IT students and guides them in their projects with a 31 years of experience.</p>
-              </div>
-            </div>
+        </div>
+      </div>
+
+      <div class="card" id="card-3">
+        <div class="image">
+          <img src="../static/media/muskan_pic.jpeg" alt="muskan pic">
+        </div>
+        <div class="content-a">
+          <div class="title">
+            | Shreya Manjucha
+          </div>
+          <div class="sub-title">Backend Developer</div>
+          <div class="button">
+            <p>Great at solving DSA sums and debugging the code! </p>
+            <button>Read More</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" id="card-4">
+        <div class="image">
+          <img src="../static/media/sir_pic.jpeg" alt="muskan pic">
+        </div>
+        <div class="content-a">
+          <div class="title">
+            | Dr. Arun Kulkarni
+          </div>
+          <div class="sub-title">Project Guide</div>
+          <div class="button">
+            <p>Mentors IT students and guides them in their projects with a 31 years of experience. </p>
+            <a href="https://tsec.edu/wp-content/uploads/2021/10/5_-Arun-Kulkarni.pdf"><button>Read More</button></a>
           </div>
         </div>
       </div>
     </div>
 
+  </div>
 
-  </section>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="../static/js/landing.js"></script>
 </body>
 
 </html>

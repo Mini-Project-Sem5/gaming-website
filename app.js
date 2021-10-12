@@ -36,7 +36,7 @@ app.get('/game', (req,res) =>{
 })
 
 app.get('/memory', (req,res) =>{
-    res.status(200).render('memory.pug')
+    res.status(200).render('memoryModified.pug')
 })
 
 app.get('/scramble', (req,res) =>{
