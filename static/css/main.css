@@ -279,3 +279,24 @@ h1 {
 .linkedin , .linkedin:hover{
 	color: blue;
 }
+
+
+@media screen and (max-width: 500px) {
+	.about-cards {
+		flex-direction: column;
+	}
+	.content h1 {
+		font-size: 7.5rem;
+	}
+
+	.content a{
+		margin: 15px 5px;
+		font-size: 2.5rem;
+		border-radius: 10px;
+	}
+
+	.card{
+		box-shadow: 3px 7px 9px 0px rgb(0 0 0 / 30%);
+		border-radius: 9px;
+	}
+}

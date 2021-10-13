@@ -11,12 +11,12 @@ header {
 
 }
 
-h1 {
+header h1 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
     color: white;
     text-transform: uppercase;
-    font-size: 1.8rem;
+    font-size: 3.8rem;
     letter-spacing: 15px;
     font-family: 'Heebo', sans-serif;
 }
@@ -31,8 +31,8 @@ section {
 }
 
 .gameArea {
-    width: 50%;
-    height: 400px;
+    width: 80%;
+    height: 504px;
     padding: 20px 0;
     background-color: #B6977D;
     display: flex;
@@ -45,12 +45,12 @@ section {
 
 h3 {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 3.5rem;
     color: black;
 }
 
 input {
-    width: 40%;
+    width: 70%;
     padding: 15px 0;
     text-align: center;
     border-radius: 25px;
@@ -59,7 +59,7 @@ input {
     background-color: #ffff;
     color: black;
     margin: 2rem 0;
-    font-size: 1.1rem;
+    font-size: 2.1rem;
 }
 
 button {
@@ -74,13 +74,14 @@ button {
 
 button.btn {
     font-weight: 800;
-    padding: 1rem 2rem;
+    padding: 0.5rem 1.5rem;
     background: white;
     text-transform: uppercase;
     transition-property: all;
     transition-duration: 0.5s;
     transition-timing-function: cubic-bezier(0.65, -0.25, 0.25, 1.95);
     border-radius: 10px;
+    font-size: 3rem;
 }
 
 button.btn:hover,
@@ -95,6 +96,9 @@ button.btn:active {
 }
 
 .Exit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-weight: 800;
     padding: 10px;
     margin: 10px;
@@ -107,4 +111,21 @@ button.btn:active {
     text-decoration: none;
     color: #2f3542;
     cursor: pointer;
+    font-size: 2rem;
+}
+
+
+@media screen and (max-width: 500px) {
+    input{
+    width: 67%;
+    padding: 15px 0;
+    text-align: center;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    background-color: #ffff;
+    color: black;
+    margin: 2rem 0;
+    font-size: 5.1rem;
+    }
 }
