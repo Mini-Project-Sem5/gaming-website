@@ -1,10 +1,10 @@
 class AudioController {
     constructor() {
-        this.bgMusic = new Audio('Audio/creepy.mp3');
-        this.flipSound = new Audio('Audio/flip.wav');
-        this.matchSound = new Audio('Audio/match.wav');
-        this.victorySound = new Audio('Audio/victory.wav');
-        this.gameOverSound = new Audio('Audio/gameOver.wav');
+        this.bgMusic = new Audio('../static/js/Audio/creepy.mp3');
+        this.flipSound = new Audio('../static/js/Audio/flip.wav');
+        this.matchSound = new Audio('../static/js/Audio/match.wav');
+        this.victorySound = new Audio('../static/js/Audio/victory.wav');
+        this.gameOverSound = new Audio('../static/js/Audio/gameOver.wav');
         this.bgMusic.volume = 0.5;
         this.bgMusic.loop = true;
     }
@@ -135,11 +135,13 @@ class MixOrMatch {
     }
 }
 
+// function abc(){
 if (document.readyState == 'loading') {
     document.addEventListener('DOMContentLoaded', ready);
 } else {
     ready();
 }
+// }
 
 function ready() {
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));

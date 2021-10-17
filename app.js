@@ -23,14 +23,6 @@ app.get('/', (req,res)=>{
     res.status(200).render('landing.pug',params)
 })
 
-// app.get('/img/X.png', (req,res) =>{
-//     res.status(200).send('static/js/img/X.png')
-// })
-
-// app.get('/img/O.png', (req,res) =>{
-//     res.status(200).send('static/js/img/O.png')
-// })
-
 app.get('/game', (req,res) =>{
     res.status(200).render('game.pug')
 })
