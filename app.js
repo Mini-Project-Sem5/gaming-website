@@ -11,36 +11,32 @@ app.use('/static', express.static('static')) // For serving static files
 app.use(express.urlencoded())
 
 // PUG SPECIFIC CONFIGURATION
-app.set('view engine', 'pug') // Set template engine as pug
+app.set('view engine', 'ejs') // Set template engine as pug
 app.set('views' , path.join(__dirname, 'views')) // Set the views directory
 
 //ENDPOINTS
 app.get('/', (req,res)=>{
-    let params = {
-        'title' : 'My Pug',
-        'content' : 'My pug HTML file with form'
-    }
-    res.status(200).render('landing.pug',params)
+    res.status(200).render('landing')
 })
 
 app.get('/game', (req,res) =>{
-    res.status(200).render('game.pug')
+    res.status(200).render('game')
 })
 
 app.get('/memory', (req,res) =>{
-    res.status(200).render('memoryModified.pug')
+    res.status(200).render('memoryModified')
 })
 
 app.get('/scramble', (req,res) =>{
-    res.status(200).render('scramble.pug')
+    res.status(200).render('scramble')
 })
 
 app.get('/maths', (req,res) =>{
-    res.status(200).render('maths.pug')
+    res.status(200).render('maths')
 })
 
 app.get('/ticAI', (req,res) =>{
-    res.status(200).render('ticAImodified.pug')
+    res.status(200).render('ticAImodified')
 })
 
 
