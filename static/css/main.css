@@ -58,6 +58,8 @@ h1 {
 	object-fit: cover;
 }
 
+
+
 .video-container:after {
 	content: '';
 	z-index: 1;
@@ -99,10 +101,23 @@ h1 {
 	opacity: 0.7;
 }
 
+
 .btn:hover {
 	transform: scale(0.98);
 }
 
+.microphone{
+	color: white;
+    margin-top: 0;
+    font-size: 19px;
+    padding: 10px;
+    background: rgba(8,10,0,0.5);
+}
+
+.microphone:hover{
+	color: white;
+	background-color: rgb(70, 70, 70);
+}
 .content a{
 	font-family: 'Poppins' , sans-serif;
 	font-size: 3rem;
